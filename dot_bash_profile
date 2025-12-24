@@ -1,0 +1,9 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# Add ssh keys to keychain on startup.
+eval $(keychain --eval --quiet ~/.ssh/github_codazendev)
+eval $(keychain --eval --quiet ~/.ssh/github_jgkingdev)
