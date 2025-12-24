@@ -1,0 +1,72 @@
+<labwc_config>
+
+  <theme>
+    <name>Triste-Violet</name>
+  </theme>
+
+  <libinput>
+    <device category="non-touch">
+      <accelProfile>flat</accelProfile>
+    </device>
+  </libinput>
+
+  <desktops>
+    <popupTime>1000</popupTime>
+    <names>
+      <name>Misc</name>
+      <name>Dev</name>
+      <name>MQP</name>
+      <name>Other</name>
+    </names>
+  </desktops>
+
+  <keyboard>
+
+    <default />
+
+    <keybind key="A-Space">
+      <action name="Execute" command="wofi --show drun" />
+    </keybind>
+
+    <keybind key="W-Space">
+      <action name="ShowMenu" menu="client-menu" atCursor="no" />
+    </keybind>
+  
+    <keybind key="W-A-Left">
+      <action name="SendToDesktop" to="left" />
+    </keybind>
+
+    <keybind key="W-Left">
+      <action name="GoToDesktop" to="left" />
+    </keybind>
+
+    <keybind key="W-A-Right">
+      <action name="SendToDesktop" to="right" />
+    </keybind>
+
+    <keybind key="W-Right">
+      <action name="GoToDesktop" to="right" />
+    </keybind>
+
+    <keybind key="W-t">
+      <action name="Execute" command="foot" />
+    </keybind>
+
+    <keybind key="W-f">
+      <action name="Execute" command="thunar" />
+    </keybind>
+  
+  </keyboard>
+
+  <mouse>
+    <default />
+
+    <context name="Root">
+      <mousebind button="Left" action="Press" />
+      <mousebind button="Middle" action="Press" />
+      <mousebind direction="Up" action="Scroll" />
+      <mousebind direction="Down" action="Scroll" />
+    </context>
+  </mouse>
+    
+</labwc_config>
