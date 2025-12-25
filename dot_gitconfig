@@ -1,0 +1,9 @@
+[user]
+	email = codazendev@gmail.com
+	name = Jeremy King
+
+[init]
+	defaultBranch = main
+
+[remote "origin"]
+	prune = true

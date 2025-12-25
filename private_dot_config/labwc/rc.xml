@@ -4,12 +4,6 @@
     <name>Triste-Violet</name>
   </theme>
 
-  <libinput>
-    <device category="non-touch">
-      <accelProfile>flat</accelProfile>
-    </device>
-  </libinput>
-
   <desktops>
     <popupTime>1000</popupTime>
     <names>
@@ -20,34 +14,44 @@
     </names>
   </desktops>
 
-  <keyboard>
+  <libinput>
+    <device category="non-touch">
+      <accelProfile>flat</accelProfile>
+    </device>
+  </libinput>
 
+  <keyboard>
+    <!-- Load default keybinds -->
     <default />
 
+    <!-- Make Alt+space bring up a launcher -->
     <keybind key="A-Space">
       <action name="Execute" command="wofi --show drun" />
     </keybind>
 
+    <!-- Make Meta+space bring up the window menu -->
     <keybind key="W-Space">
       <action name="ShowMenu" menu="client-menu" atCursor="no" />
     </keybind>
-  
-    <keybind key="W-A-Left">
-      <action name="SendToDesktop" to="left" />
-    </keybind>
 
+    <!-- Workspace navigations keybinds -->
     <keybind key="W-Left">
       <action name="GoToDesktop" to="left" />
     </keybind>
 
-    <keybind key="W-A-Right">
-      <action name="SendToDesktop" to="right" />
+    <keybind key="W-A-Left">
+      <action name="SendToDesktop" to="left" />
     </keybind>
 
     <keybind key="W-Right">
       <action name="GoToDesktop" to="right" />
     </keybind>
 
+    <keybind key="W-A-Right">
+      <action name="SendToDesktop" to="right" />
+    </keybind>
+
+    <!-- Dedicated program keybinds -->
     <keybind key="W-t">
       <action name="Execute" command="foot" />
     </keybind>
@@ -59,11 +63,15 @@
   </keyboard>
 
   <mouse>
+    <!-- Load default mouse binds -->
     <default />
 
     <context name="Root">
+      <!-- Unbind left and middle clicking on the desktop -->
       <mousebind button="Left" action="Press" />
       <mousebind button="Middle" action="Press" />
+
+      <!-- Unbind scrolling on the desktop -->
       <mousebind direction="Up" action="Scroll" />
       <mousebind direction="Down" action="Scroll" />
     </context>
