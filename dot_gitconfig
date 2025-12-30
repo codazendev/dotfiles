@@ -3,7 +3,12 @@
 	name = Jeremy King
 
 [init]
+    # Tell git to use a default branch name of "main" instead of "master".
 	defaultBranch = main
 
-[remote "origin"]
-	prune = true
+[alias]
+    # Alias to change the user name and email for the current repository to my codazendev accounts.
+    usec = "config user.name 'Jeremy King' && config user.email 'codazendev@gmail.com'"
+
+    # Alias to change the user name and email for the current repository to my jgkingdev accounts.
+    usej = "config user.name 'Jeremy King' && config user.email 'jeremykingdev@gmail.com'"
