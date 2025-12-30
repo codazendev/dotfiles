@@ -1,0 +1,15 @@
+Host github.com-codazendev
+    HostName github.cdev
+    User git
+    IdentityFile ~/.ssh/id_github_codazendev
+
+Host github.jdev
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_github_jgkingdev
+
+Host aether
+    HostName jkingaether.duckdns.org
+    Port 2764
+    User jking
+    IdentityFile ~/.ssh/id_aetherserver
