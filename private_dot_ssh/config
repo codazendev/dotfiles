@@ -1,5 +1,5 @@
-Host github.com-codazendev
-    HostName github.cdev
+Host github.cdev
+    HostName github.com
     User git
     IdentityFile ~/.ssh/id_github_codazendev
 
