@@ -1,15 +1,9 @@
-Host github.cdev
+Host github.c
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_github_codazendev
 
-Host github.jdev
+Host github.j
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_github_jgkingdev
-
-Host aether
-    HostName jkingaether.duckdns.org
-    Port 2764
-    User jking
-    IdentityFile ~/.ssh/id_aetherserver
