@@ -8,7 +8,7 @@
 
 [alias]
     # Alias to change the user name and email for the current repository to my codazendev accounts.
-    usec = "config user.name 'Jeremy King' && config user.email 'codazendev@gmail.com'"
+    usec = !git config user.name 'Jeremy King' && git config user.email 'codazendev@gmail.com'
 
     # Alias to change the user name and email for the current repository to my jgkingdev accounts.
-    usej = "config user.name 'Jeremy King' && config user.email 'jeremykingdev@gmail.com'"
+    usej = !git config user.name 'Jeremy King' && git config user.email 'jeremykingdev@gmail.com'
