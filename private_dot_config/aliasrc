@@ -1,0 +1,9 @@
+#!/bin/zsh
+# Sets up shell aliases. Set up so ideally it can be sourced by any shell.
+
+# Colorized aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# Distraction alias for rbonsai
+alias distract='rbonsai -S'

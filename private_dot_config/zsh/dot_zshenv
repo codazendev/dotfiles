@@ -1,0 +1,12 @@
+#!/bin/zsh
+# Used for setting user's environment variables; it should not contain commands that produce output or assume the shell is attached to a TTY.
+# When this file exists it will always be read.
+
+# Set XDG directories
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# Source aliases
+source $XDG_CONFIG_HOME/env

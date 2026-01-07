@@ -1,0 +1,20 @@
+#!/bin/zsh
+# Sets up environment stuff. Set up so ideally it can be sourced by any shell.
+
+# Set default programs
+export EDITOR="helix"
+export TERMINAL="foot"
+export BROWSER="firefox"
+
+# Set XDG directories
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# Clean up home directory by exporting XDG directories
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+
+# Add Godot Version Manager to path
+export PATH="/home/jking/.gdvm/bin/current_godot:/home/jking/.gdvm/bin:$PATH"

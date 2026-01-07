@@ -1,7 +1,7 @@
 # Labwc autostart file
 
 # Set background.
-swaybg -i ~/Pictures/wallpaper.png >/dev/null 2>&1 &
+swaybg -i ~/media/pics/wallpapers/wallpaper.png >/dev/null 2>&1 &
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
