@@ -4,5 +4,5 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-eval $(keychain --eval --quiet ~/.ssh/id_codazendev_github)
-eval $(keychain --eval --quiet ~/.ssh/id_jgkingdev_github)
+eval $(keychain --eval --quiet ~/.ssh/id_github_codazendev)
+eval $(keychain --eval --quiet ~/.ssh/id_github_jgkingdev)
