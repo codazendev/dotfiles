@@ -13,8 +13,17 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 # Clean up home directory by exporting XDG directories
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+export GOPATH="$XDG_DATA_HOME"/go
+export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
+export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
+export WINEPREFIX="$XDG_DATA_HOME"/wine
+export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
 
 # Add Godot Version Manager to path
 export PATH="/home/jking/.gdvm/bin/current_godot:/home/jking/.gdvm/bin:$PATH"

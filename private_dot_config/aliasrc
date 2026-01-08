@@ -5,5 +5,8 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+# Config file movement aliases
+alias es-de='es-de --home ~/.local/share --resolution 1920 980'
+
 # Distraction alias for rbonsai
 alias distract='rbonsai -S'
