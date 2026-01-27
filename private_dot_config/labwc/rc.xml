@@ -7,10 +7,11 @@
   <desktops>
     <popupTime>1000</popupTime>
     <names>
-      <name>General</name>
+      <name>Misc</name>
       <name>Dev</name>
       <name>MQP</name>
       <name>MQP-Misc</name>
+      <name>Jobs</name>
       <name>Other</name>
     </names>
   </desktops>
