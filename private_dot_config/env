@@ -25,5 +25,8 @@ export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
 export WINEPREFIX="$XDG_DATA_HOME"/wine
 export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
 
+# Add cargo binaries to path
+export PATH="$CARGO_HOME/bin:$PATH"
+
 # Add Godot Version Manager to path
-export PATH="/home/jking/.gdvm/bin/current_godot:/home/jking/.gdvm/bin:$PATH"
+export PATH="~/.gdvm/bin/current_godot:~/.gdvm/bin:$PATH"
