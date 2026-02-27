@@ -1,9 +1,12 @@
 #!/bin/zsh
-# Sets up shell aliases. Set up so ideally it can be sourced by any shell.
+# Set up my shell aliases
 
 # Colorized aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+
+# Shorthand aliases
+alias hx='helix'
 
 # Screenshot aliases
 alias scopy='grim -g "$(slurp)" - | wl-copy'

@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Sets up environment stuff. Set up so ideally it can be sourced by any shell.
+# Set up my environment variables
 
 # Set default programs
 export EDITOR="helix"
@@ -12,21 +12,24 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-# Clean up home directory by exporting XDG directories
-export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+# Set program-specific XDG directories
+export ZDOTDIR="$XDG_CONFIG_HOME"/.shell/zsh
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
-export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export GOPATH="$XDG_DATA_HOME"/go
+export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
 export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
-export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
 export WINEPREFIX="$XDG_DATA_HOME"/wine
-export WORKON_HOME="$XDG_DATA_HOME/virtualenvs"
+export WORKON_HOME="$XDG_DATA_HOME"/virtualenvs
 
-# Add cargo binaries to path
-export PATH="$CARGO_HOME/bin:$PATH"
-
-# Add Godot Version Manager to path
-export PATH="~/.gdvm/bin/current_godot:~/.gdvm/bin:$PATH"
+# Add directories to the path
+# Locally installed binaries
+export PATH="$PATH:$HOME/.local/bin"
+# Cargo
+export PATH="$PATH:$CARGO_HOME/bin"
+# Godot Version Manager
+export PATH="$PATH:$HOME/.gdvm/bin"
+export PATH="$PATH:$HOME/.gdvm/bin/current_godot"

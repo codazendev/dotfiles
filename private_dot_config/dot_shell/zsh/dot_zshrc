@@ -1,8 +1,5 @@
 #!/bin/zsh
-# Used for setting user's interactive shell configuration and executing commands, will be read when starting as an interactive shell.
-
-# If not running interactively, don't do anything
-[[ $- =~ i ]] || return
+# Used for setting user's interactive shell configuration and executing commands. Will be read when you start an interactive shell.
 
 # Use XDG dirs for history file
 # History settings
@@ -27,7 +24,4 @@ prompt redhat
 setopt nobeep
 
 # Source aliases
-source $XDG_CONFIG_HOME/aliasrc
-
-# Add locally installed binaries to the path
-export PATH="$PATH:$HOME/.local/bin"
+source $XDG_CONFIG_HOME/.shell/alias

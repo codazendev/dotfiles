@@ -1,6 +1,5 @@
 #!/bin/zsh
-# Used for setting user's environment variables; it should not contain commands that produce output or assume the shell is attached to a TTY.
-# When this file exists it will always be read.
+# Used for setting user's environment variables. Will be read whenever you start a shell environment with zsh.
 
-# Source aliases
-source $HOME/.config/env
+# Source environment variables
+source $HOME/.config/.shell/env
