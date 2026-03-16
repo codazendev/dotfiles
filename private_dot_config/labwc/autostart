@@ -5,7 +5,7 @@ swaybg -i ~/media/pics/wallpapers/wallpaper.png >/dev/null 2>&1 &
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
-kanshi >/dev/null 2>&1 &
+kanshi switch default >/dev/null 2>&1 &
 
 # Launch a panel.
 waybar >/dev/null 2>&1 &
