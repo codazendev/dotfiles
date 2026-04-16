@@ -12,3 +12,6 @@
 
     # Alias to change the user name and email for the current repository to my jgkingdev accounts.
     usej = !git config user.name 'Jeremy King' && git config user.email 'jeremykingdev@gmail.com'
+
+[pull]
+    rebase = true

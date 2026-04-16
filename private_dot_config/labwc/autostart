@@ -1,7 +1,9 @@
 # Labwc autostart file
 
 # Set background.
-swaybg -i ~/media/pics/wallpapers/wallpaper.png >/dev/null 2>&1 &
+#swaybg -i ~/media/pics/wallpapers/wallpaper.png >/dev/null 2>&1 & #pixel art wallpaper
+swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 & #laundromat wallpaper
+#swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 & #frieren wallpaper
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
@@ -13,12 +15,9 @@ waybar >/dev/null 2>&1 &
 # Enable notifications.
 mako >/dev/null 2>&1 &
 
-# Start OpenTabletDriver daemon.
-otd-daemon >/dev/null 2>&1 &
-
 # Lock screen after 5 minutes; turn off display after another 5 minutes.
 swayidle -w \
 	timeout 300 'swaylock -f -c 000000' \
-	timeout 600 'wlopm --off \*' \
-	resume 'wlopm --on \*' \
+	timeout 600 'pkill kanshi ; wlopm --off \*' \
+	resume 'kanshi & wlopm --on \*' \
 	before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &
