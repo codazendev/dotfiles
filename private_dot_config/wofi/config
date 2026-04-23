@@ -1,5 +1,6 @@
 show=drun
 term=foot
 insensitive=true
-matching=strict-contains
+matching=strict
+no_actions=true
 close_on_focus_loss=true
