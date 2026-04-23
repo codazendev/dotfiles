@@ -1,0 +1,5 @@
+show=drun
+term=foot
+insensitive=true
+matching=strict-contains
+close_on_focus_loss=true

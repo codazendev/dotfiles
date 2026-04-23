@@ -27,7 +27,7 @@
 
     <!-- Make Alt+space bring up a launcher -->
     <keybind key="A-Space">
-      <action name="Execute" command="wofi --show=drun --insensitive=true" />
+      <action name="Execute" command="wofi" />
     </keybind>
 
     <!-- Make Meta+space bring up the window menu -->
