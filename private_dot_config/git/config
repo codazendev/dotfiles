@@ -1,17 +1,21 @@
 [user]
-	email = codazendev@gmail.com
-	name = Jeremy King
+    email = codazendev@gmail.com
+    name = Jeremy King
 
 [init]
-    # Tell git to use a default branch name of "main" instead of "master".
-	defaultBranch = main
+    # Tell git to use 'main' instead of 'master' for default branches
+    defaultBranch = main
 
 [alias]
-    # Alias to change the user name and email for the current repository to my codazendev accounts.
+    # Alias for switching config to codazendev account
     usec = !git config user.name 'Jeremy King' && git config user.email 'codazendev@gmail.com'
-
-    # Alias to change the user name and email for the current repository to my jgkingdev accounts.
+    # Alias for switching config to jgkingdev account
     usej = !git config user.name 'Jeremy King' && git config user.email 'jeremykingdev@gmail.com'
+
+    # Alias for cloning with codazendev account
+    cone = !sh -c 'git clone "$1" && cd $(basename $1 .git) && git usec' -
+    # Alias for cloning with jgkingdev account
+    jone = !sh -c 'git clone "$1" && cd $(basename $1 .git) && git usej' -
 
 [pull]
     rebase = true

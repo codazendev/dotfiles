@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 # Set up my environment variables
 
 # Set default programs
@@ -12,24 +12,12 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
-# Set program-specific XDG directories
-export ZDOTDIR="$XDG_CONFIG_HOME"/.shell/zsh
-export CARGO_HOME="$XDG_DATA_HOME"/cargo
-export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
-export GOPATH="$XDG_DATA_HOME"/go
-export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
-export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
-export NUGET_PACKAGES="$XDG_CACHE_HOME"/NuGetPackages
-export TEXMFVAR="$XDG_CACHE_HOME"/texlive/texmf-var
-export WINEPREFIX="$XDG_DATA_HOME"/wine
-export WORKON_HOME="$XDG_DATA_HOME"/virtualenvs
-
 # Add directories to the path
-# Locally installed binaries
+# Local binaries
 export PATH="$PATH:$HOME/.local/bin"
-# Cargo
-export PATH="$PATH:$CARGO_HOME/bin"
 # Godot Version Manager
 export PATH="$PATH:$HOME/.gdvm/bin"
 export PATH="$PATH:$HOME/.gdvm/bin/current_godot"
+
+# Source aliases
+source $XDG_CONFIG_HOME/.shell/alias

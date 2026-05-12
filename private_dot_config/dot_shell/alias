@@ -1,20 +1,15 @@
-#!/bin/zsh
+#!/bin/sh
 # Set up my shell aliases
 
-# Colorized aliases
+# Colorize aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
 # Shorthand aliases
+alias sudo='sudo '
 alias hx='helix'
-alias lg='lazygit'
+alias gg='lazygit'
 
 # Screenshot aliases
 alias scopy='grim -g "$(slurp)" - | wl-copy'
 alias sshot='grim -g "$(slurp)"'
-
-# Distraction alias for rbonsai
-alias distract='rbonsai -S'
-
-# Godot alias for MQP
-alias misfits='gdvm run 4.5'

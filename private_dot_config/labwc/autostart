@@ -1,23 +1,31 @@
 # Labwc autostart file
 
-# Set background.
-#swaybg -i ~/media/pics/wallpapers/wallpaper.png >/dev/null 2>&1 & #pixel art wallpaper
-swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 & #laundromat wallpaper
-#swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 & #frieren wallpaper
+# Set up pipewire session.
+/usr/bin/pipewire >/dev/null 2>&1 &
+/usr/bin/pipewire-pulse >/dev/null 2>&1 &
+/usr/bin/wireplumber >/dev/null 2>&1 &
 
-# Configure output directives such as mode, position, scale and transform.
-# Use wlr-randr to get your output names
+# Set background.
+#swaybg -i ~/media/pics/wallpapers/wallpaper.png >/dev/null 2>&1 &
+# Pixel art wallpaper
+swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 &
+# Laundromat wallpaper
+#swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 &
+# Frieren wallpaper
+swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 &
+
+# Configure displays
 kanshi switch default >/dev/null 2>&1 &
 
-# Launch a panel.
+# Launch toolbar
 waybar >/dev/null 2>&1 &
 
-# Enable notifications.
+# Enable notifications
 mako >/dev/null 2>&1 &
 
-# Lock screen after 5 minutes; turn off display after another 5 minutes.
+# Lock screen after 5 minutes and turn off display after another 5 minutes
 swayidle -w \
-	timeout 300 'swaylock -f -c 000000' \
-	timeout 600 'pkill kanshi ; wlopm --off \*' \
-	resume 'kanshi & wlopm --on \*' \
-	before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &
+    timeout 300 'swaylock -f -c 000000' \
+    timeout 600 'pkill kanshi ; wlopm --off \*' \
+    resume 'kanshi & wlopm --on \*' \
+    before-sleep 'swaylock -f -c 000000' >/dev/null 2>&1 &

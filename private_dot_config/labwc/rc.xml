@@ -1,81 +1,85 @@
 <labwc_config>
 
-  <theme>
-    <name>Triste-Violet</name>
-  </theme>
+    <theme>
+        <name>Triste-Violet</name>
+    </theme>
 
-  <desktops>
-    <popupTime>1000</popupTime>
-    <names>
-      <name>main</name>
-      <name>dev</name>
-      <name>CS4732</name>
-      <name>CS3431</name>
-      <name>etc</name>
-    </names>
-  </desktops>
+    <desktops>
+        <popupTime>1000</popupTime>
+        <names>
+            <name>main</name>
+            <name>gamedev</name>
+            <name>jobs</name>
+            <name>etc</name>
+        </names>
+    </desktops>
 
-  <libinput>
-    <device category="non-touch">
-      <accelProfile>flat</accelProfile>
-    </device>
-  </libinput>
+    <libinput>
+        <device category="non-touch">
+            <accelProfile>flat</accelProfile>
+        </device>
+    </libinput>
 
-  <keyboard>
-    <!-- Load default keybinds -->
-    <default />
+    <keyboard>
+        <!-- Load default keybinds -->
+        <default />
 
-    <!-- Make Alt+space bring up a launcher -->
-    <keybind key="A-Space">
-      <action name="Execute" command="wofi --conf=~/.config/wofi/config" />
-    </keybind>
+        <!-- Make alt+space bring up a launcher -->
+        <keybind key="A-Space">
+            <action name="Execute" command="wofi --conf=~/.config/wofi/config" />
+        </keybind>
 
-    <!-- Make Meta+space bring up the window menu -->
-    <keybind key="W-Space">
-      <action name="ShowMenu" menu="client-menu" atCursor="no" />
-    </keybind>
+        <!-- Make super+space bring up the window menu -->
+        <keybind key="W-Space">
+            <action name="ShowMenu" menu="clientMenu" atCursor="no" />
+        </keybind>
 
-    <!-- Workspace navigations keybinds -->
-    <keybind key="W-Left">
-      <action name="GoToDesktop" to="left" />
-    </keybind>
+        <!-- Workspace navigation -->
+        <keybind key="W-Left">
+            <action name="GoToDesktop" to="left" />
+        </keybind>
 
-    <keybind key="W-A-Left">
-      <action name="SendToDesktop" to="left" />
-    </keybind>
+        <keybind key="W-A-Left">
+            <action name="SendToDesktop" to="left" />
+        </keybind>
 
-    <keybind key="W-Right">
-      <action name="GoToDesktop" to="right" />
-    </keybind>
+        <keybind key="W-Right">
+            <action name="GoToDesktop" to="right" />
+        </keybind>
 
-    <keybind key="W-A-Right">
-      <action name="SendToDesktop" to="right" />
-    </keybind>
+        <keybind key="W-A-Right">
+            <action name="SendToDesktop" to="right" />
+        </keybind>
 
-    <!-- Dedicated program keybinds -->
-    <keybind key="W-t">
-      <action name="Execute" command="foot" />
-    </keybind>
+        <!-- Dedicated program keybinds -->
+        <keybind key="W-x">
+            <action name="Execute" command="foot" />
+        </keybind>
 
-    <keybind key="W-f">
-      <action name="Execute" command="thunar" />
-    </keybind>
-  
-  </keyboard>
+        <keybind key="W-c">
+            <action name="Execute" command="thunar" />
+        </keybind>
+    </keyboard>
 
-  <mouse>
-    <!-- Load default mouse binds -->
-    <default />
+    <mouse>
+        <!-- Load default mouse binds -->
+        <default />
 
-    <context name="Root">
-      <!-- Unbind left and middle clicking on the desktop -->
-      <mousebind button="Left" action="Press" />
-      <mousebind button="Middle" action="Press" />
+        <context name="Root">
+            <!-- Unbind left and middle clicking on the desktop -->
+            <mousebind button="Left" action="Press" />
+            <mousebind button="Middle" action="Press" />
 
-      <!-- Unbind scrolling on the desktop -->
-      <mousebind direction="Up" action="Scroll" />
-      <mousebind direction="Down" action="Scroll" />
-    </context>
-  </mouse>
-    
+            <!-- Unbind scrolling on the desktop -->
+            <mousebind direction="Up" action="Scroll" />
+            <mousebind direction="Down" action="Scroll" />
+        </context>
+
+        <!-- Unbind scrolling on title bars -->
+        <context name="TitleBar">
+            <mousebind direction="Up" action="Scroll" />
+            <mousebind direction="Down" action="Scroll" />
+        </context>
+    </mouse>
+
 </labwc_config>

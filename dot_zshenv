@@ -1,5 +1,0 @@
-#!/bin/zsh
-# Used for setting user's environment variables. Will be read whenever you start a shell environment with zsh.
-
-# Source environment variables
-source $HOME/.config/.shell/env
