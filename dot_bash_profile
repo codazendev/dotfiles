@@ -1,0 +1,9 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# Register ssh keys with keychain
+eval $(keychain --eval --quiet ~/.ssh/id_github_codazendev)
+eval $(keychain --eval --quiet ~/.ssh/id_github_jgkingdev)
