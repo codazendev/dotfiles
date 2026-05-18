@@ -1,10 +1,5 @@
 # Labwc autostart file
 
-# Set up pipewire session.
-/usr/bin/pipewire >/dev/null 2>&1 &
-/usr/bin/pipewire-pulse >/dev/null 2>&1 &
-/usr/bin/wireplumber >/dev/null 2>&1 &
-
 # Set background.
 #swaybg -i ~/media/pics/wallpapers/wallpaper.png >/dev/null 2>&1 &
 # Pixel art wallpaper
