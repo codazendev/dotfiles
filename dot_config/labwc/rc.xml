@@ -52,7 +52,7 @@
         </keybind>
 
         <!-- Dedicated program keybinds -->
-        <keybind key="W-Enter">
+        <keybind key="W-Return">
             <action name="Execute" command="foot" />
         </keybind>
 

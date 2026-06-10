@@ -1,11 +1,9 @@
 profile {
 {{- if eq .chezmoi.hostname "helios" }}
-# pc screen configuration
-    output DP-1 mode 2560x1440@180.000000 scale 1.25
-    output HDMI-A mode 1920x1080@60.000000 scale 1.0
+    output DP-1 mode 2560x1440@180.000000 position 1920,0 scale 1.25
+    output HDMI-A mode 1920x1080@60.000000 position 0,0 scale 1.0
 {{- end }}
 {{- if eq .chezmoi.hostname "artemis" }}
-# laptop screen configuration
     output eDP-1 mode 1920x1200@60.001999 scale 1.25
 {{- end}}
 }
