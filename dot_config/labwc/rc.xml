@@ -52,12 +52,12 @@
         </keybind>
 
         <!-- Dedicated program keybinds -->
-        <keybind key="W-x">
+        <keybind key="W-Enter">
             <action name="Execute" command="foot" />
         </keybind>
 
         <keybind key="W-c">
-            <action name="Execute" command="thunar" />
+            <action name="Execute" command="pcmanfm" />
         </keybind>
     </keyboard>
 
