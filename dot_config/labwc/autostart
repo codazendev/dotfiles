@@ -1,24 +1,20 @@
 # Labwc autostart file
 
-# Set background.
-#swaybg -i ~/media/pics/wallpapers/wallpaper.png >/dev/null 2>&1 &
-# Pixel art wallpaper
-swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 &
-# Laundromat wallpaper
-#swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 &
-# Frieren wallpaper
-swaybg -i ~/media/pics/wallpapers/wallpaper1.jpg >/dev/null 2>&1 &
+runsvdir ~/.runit/runsvdir &
 
-# Configure displays
-kanshi switch default >/dev/null 2>&1 &
+# wallpapers
+wpaperd -d
 
-# Launch toolbar
-waybar >/dev/null 2>&1 &
+# displays
+kanshi >/dev/null 2>&1 &
 
-# Enable notifications
+# statusbar
+waybar --log-level off &
+
+# notifications
 mako >/dev/null 2>&1 &
 
-# Lock screen after 5 minutes and turn off display after another 5 minutes
+# lock screen after 5 minutes and turn off display after another 5 minutes
 swayidle -w \
     timeout 300 'swaylock -f -c 000000' \
     timeout 600 'pkill kanshi ; wlopm --off \*' \
