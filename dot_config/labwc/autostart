@@ -1,7 +1,5 @@
 # Labwc autostart file
 
-runsvdir ~/.runit/runsvdir &
-
 # wallpapers
 wpaperd -d
 
