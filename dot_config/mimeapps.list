@@ -1,23 +1,14 @@
 [Added Associations]
-text/x-csrc=org.xfce.mousepad.desktop;
-application/xml=org.xfce.mousepad.desktop;
-application/x-shellscript=org.xfce.mousepad.desktop;
-text/plain=org.xfce.mousepad.desktop;
-application/json=org.xfce.mousepad.desktop;
-application/vnd.ms-publisher=org.xfce.mousepad.desktop;
-application/octet-stream=blender.desktop;org.xfce.mousepad.desktop;
-application/zip=pcmanfm.desktop;xarchiver.desktop;
+application/xml=org.gnome.gedit.desktop;
+text/plain=org.gnome.gedit.desktop;
+application/json=org.gnome.gedit.desktop;
+application/zip=pcmanfm.desktop;
 application/x-msdownload=pcmanfm.desktop;
 image/png=viewnior.desktop;
 image/jpeg=viewnior.desktop;
 
 [Default Applications]
-application/x-shellscript=org.xfce.mousepad.desktop
-x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop
-x-scheme-handler/discord=vesktop.desktop
-application/vnd.ms-publisher=org.xfce.mousepad.desktop
-application/octet-stream=org.xfce.mousepad.desktop
-application/x-msdownload=pcmanfm.desktop
+application/x-shellscript=org.gnome.gedit.desktop
 x-scheme-handler/ror2mm=r2modman.desktop
 image/png=viewnior.desktop
 inode/directory=pcmanfm.desktop
