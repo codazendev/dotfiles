@@ -14,3 +14,8 @@ source $HOME/.config/.shell/env
 
 # Godot Version Manager
 export PATH="/home/jking/.gdvm/bin/current_godot:/home/jking/.gdvm/bin:$PATH"
+
+# Add bin subdirectories to path
+for d in ~/.local/bin/*; do
+    PATH+=":$d"
+done
