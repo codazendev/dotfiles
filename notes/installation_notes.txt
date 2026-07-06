@@ -73,3 +73,5 @@ explore alternatives to wpaperd
 add texworks configuration to chezmoi
 change this file to markdown instead of txt
 check various packages' optional dependencies to see what I might be missing
+colorize the zsh prompt
+make zsh use alt+backspace to delete words instead of going by whitespace
