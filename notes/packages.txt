@@ -1,0 +1,158 @@
+# system stuff
+base				done
+base-devel			done
+linux				done
+linux-firmware			done
+linux-headers			done
+
+noto-fonts			done
+noto-fonts-cjk			done
+noto-fonts-emoji		done
+
+# system and dinit related things
+acpid-dinit			done
+dbus-dinit			done
+syslog-ng-dinit			done
+seatd-dinit			done
+turnstile-dinit			done
+avahi-dinit			done
+bluez-dinit			done
+chrony-dinit			done
+cronie-dinit			done
+# cups-dinit				add in if i ever need printing
+elogind-dinit			done
+haveged-dinit			done
+logrotate			done
+# power-profiles-daemon-dinit
+alsa-utils-dinit		done
+openssh-dinit			done
+tailscale-dinit			done
+sddm-dinit			done
+# smartmontools
+
+# audio
+pipewire			done
+pipewire-dinit			done
+pipewire-pulse			done
+pipewire-pulse-dinit		done
+wireplumber			done
+
+# package management
+artix-archlinux-support		done
+yay				done
+# pacutils
+
+man-db				done
+man-pages			done
+
+# file stuff
+7zip				done
+unzip				done
+xarchiver				find better archive handler (one that'll let me 'Extract Here'
+zip				done
+
+mpv				done
+# tumbler				need to figure out thumbnailing needs first
+viewnior			done
+
+# dotfiles
+chezmoi				done
+
+# desktop stuff
+brightness			done
+brightnessctl			done
+fastfetch			done
+foot				done
+vim				done
+helix				done
+lazygit				done
+htop				done
+yt-dlp				done
+inxi				done
+# rbonsai
+kanshi				done
+# swaybg
+swayidle			done
+swaylock			done
+labwc				done
+waybar				done
+mako				done
+wpaperd				done	blocks labwc root input; try swaybg again or find alternative
+wofi				done
+pcmanfm				done
+gedit				done
+pavucontrol			done
+
+# wayland
+cliphist			done
+grim				done
+slurp				done
+wf-recorder			done
+wl-clip-persist			done
+wl-clipboard			done
+wlopm				done
+wlr-randr			done
+xdg-desktop-portal		done
+xdg-desktop-portal-wlr		done
+
+dconf-editor			done
+
+# dev stuff
+git				done
+
+# creative stuff
+audacity
+blender
+gimp
+
+# internet stuff
+equibop-bin			done
+firefox				done
+# halloy				also try out alternatives if i decide to get into IRC
+
+# game stuff
+steam
+gamescope			done
+osu-lazer-bin			done
+prismlauncher			done
+# packwiz-git				add in if i need to do more minecraft modpack management (probably)
+# r2modman-bin				add in if i do more with modded EtG or whatever
+# archipelagowm-bin			add in if it seems like i'm going to do more archipelagos
+# lumafly				add in if it seems like i'm going to do modded hollow knight again
+
+# misc stuff
+openrgb				done
+iloader-bin
+localsend-bin
+# virt-manager				worry about if i need to do virtual machines ever
+
+# backups
+borg				done
+# rsync
+# timeshift
+
+# idk but these have a particular vibe
+libreoffice-still
+texworks
+texlive-basic
+texlive-bibtexextra
+texlive-binextra
+texlive-context
+texlive-fontsextra
+texlive-fontsrecommended
+texlive-fontutils
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-latex
+texlive-latexextra
+texlive-latexrecommended
+texlive-luatex
+texlive-mathscience
+texlive-metapost
+texlive-music
+texlive-pictures
+texlive-plaingeneric
+texlive-pstricks
+texlive-publishers
+texlive-xetex
