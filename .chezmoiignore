@@ -1,0 +1,9 @@
+README.md
+
+# Ignore notes directory and its contents
+notes/
+notes/*
+
+# Ignore backups directory and its contents
+archive/
+archive/*
