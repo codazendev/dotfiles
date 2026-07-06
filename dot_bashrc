@@ -10,7 +10,7 @@
 # PS1='[\u@\h \W]\$ '
 
 # Source environment variables
-source $HOME/.config/.shell/env
+source $HOME/.config/shell/env
 
 # Godot Version Manager
 export PATH="/home/jking/.gdvm/bin/current_godot:/home/jking/.gdvm/bin:$PATH"

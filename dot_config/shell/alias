@@ -8,6 +8,7 @@ alias grep='grep --color=auto'
 # Shorthand aliases
 alias sudo='sudo '
 alias hx='helix'
+alias g='git'
 alias gg='lazygit'
 
 # Screenshot aliases

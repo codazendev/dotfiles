@@ -20,4 +20,4 @@ export PATH="$PATH:$HOME/.gdvm/bin"
 export PATH="$PATH:$HOME/.gdvm/bin/current_godot"
 
 # Source aliases
-source $XDG_CONFIG_HOME/.shell/alias
+source $XDG_CONFIG_HOME/shell/alias
