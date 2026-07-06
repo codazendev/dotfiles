@@ -1,86 +1,75 @@
-installation notes
+Installation Notes
 
-had to install btrfs-progs on mnt to get basestrap to work
+# Limine setup
+https://wiki.archlinux.org/title/Limine
 
-followed limine instructions on arch wiki https://wiki.archlinux.org/title/Limine
+# Auto-mounting drives
+If the machine has any auto-mounted drives, make sure the fstab file is set up correctly
+Give user access to auto-mounted drives
+`chmod user /mnt/$FOLDER_NAME`
 
-things that aren't just installing packages:
-set up limine configuration	done (for now)
-enable arch repos		done
-set up ssh
-set up chezmoi			done
-set up gdvm
-set up scopebuddy		done
-configure sddm
-automatically set up Triste-Violet?
-configure metalog
+# Package manager setup
+Modify pacman.conf to enable the arch linux repositories
+```
+[system]
+Include = /etc/pacman.d/mirrorlist
 
-configure auto mounting drives and such (udisks?)
+[world]
+Include = /etc/pacman.d/mirrorlist
 
-customize firefox toolbar	done
-change firefox device name	done
-set up firefox adblocking	done
-https://github.com/pixeltris/TwitchAdSolutions
+[galaxy]
+Include = /etc/pacman.d/mirrorlist
 
-put 'twitch.tv##+js(twitch-videoad)' in my filters and
-'https://raw.githubusercontent.com/pixeltris/TwitchAdSolutions/f8f86706daf90daa534b26bce5b2f01238667d5f/vaft/vaft-ublock-origin.js'
-in user resource thing under advanced user settings
+[lib32]
+Include = /etc/pacman.d/mirrorlist
 
-pacman -S [--asexplicit | --asdeps]
+# Arch repositories
+[extra]
+Include = /etc/pacman.d/mirrorlist-arch
 
-added logrotate
-added keychain
+[multilib]
+Include = /etc/pacman.d/mirrorlist-arch
+```
 
-needed to install
-nvidia-580xx-dkms
-nvidia-580xx-utils
+# Dotfiles
+Clone and apply dotfiles via chezmoi
+`chezmoi init https://github.com/codazendev/dotfiles.git`
+`chezmoi diff`
+`chezmoi apply`
+(make sure to update the origin url once ssh is set up)
 
-xdg-user-dirs
+# SSH
+Set up SSH
 
+# Godot
+Install gdvm
+`curl -sSL https://gdvm.io/install.sh | bash`
 
-would be good to check optional deps for all packages and see what would be useful
+# Gaming
+If the machine will be used for gaming, set up scopebuddy`
+`sudo curl -Lo /usr/local/bin/scopebuddy https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/refs/heads/main/bin/scopebuddy`
+`sudo chmod +x /usr/local/bin/scopebuddy`
+`sudo ln -s scopebuddy /usr/local/bin/scb`
 
-add rtkit
-add alsa-utils
-add libnotify
-
-launching pavucontrol seemed to make firefox work???
-now firefox just works without issue????
-
-wpa_supplicant
-otf-font-awesome
-connman-gtk
-
-install bash-completion
-usbutils
-
+# osu!
+If the machine will be used for osu!, blacklist the wacom and hid_uclogic kernel modules
 https://unix.stackexchange.com/a/797099
 https://wiki.archlinux.org/title/Kernel_module#blacklist
 
-texlive
-texworks
+# Firefox
+Customize the Firefox toolbar and change the device name to 'jking@$HOSTNAME'
+If you haven't quit watching Twitch yet, set up adblocking through UBlock Origin:
+https://github.com/pixeltris/TwitchAdSolutions
 
-texworks configuration
+Then put `twitch.tv##+js(twitch-videoad)` in "My Filters" and
+`https://raw.githubusercontent.com/pixeltris/TwitchAdSolutions/f8f86706daf90daa534b26bce5b2f01238667d5f/vaft/vaft-ublock-origin.js`
+in `userResourcesLocation` field in the "Advanced User Settings" screen
 
-chmod user /mnt/backups
-chmod user /mnt/media
 
-scopebuddy
-sudo curl -Lo /usr/local/bin/scopebuddy https://raw.githubusercontent.com/HikariKnight/ScopeBuddy/refs/heads/main/bin/scopebuddy
-sudo chmod +x /usr/local/bin/scopebuddy
-sudo ln -s scopebuddy /usr/local/bin/scb
-
-spotify-launcher
-had to install ffmpeg4.4 to make local files work
-
-added puddletag
-
-added audacity
-blender
-
-# osu dev
-dotnet-sdk-8.0
-rider
-
-zsh
-zsh-completions
+# Up next:
+configure sddm
+configure metalog
+explore alternatives to wpaperd
+add texworks configuration to chezmoi
+change this file to markdown instead of txt
+check various packages' optional dependencies to see what I might be missing

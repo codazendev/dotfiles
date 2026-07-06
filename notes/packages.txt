@@ -1,158 +1,210 @@
-# system stuff
-base				done
-base-devel			done
-linux				done
-linux-firmware			done
-linux-headers			done
+KEY:
+# Header
++ Decidedly required/important package
+- Conditional package
+? Undecided package
 
-noto-fonts			done
-noto-fonts-cjk			done
-noto-fonts-emoji		done
+# Base System
++ base
++ base-devel
++ linux
++ linux-firmware
++ linux-headers
+- intel-ucode
+- amd-ucode
 
-# system and dinit related things
-acpid-dinit			done
-dbus-dinit			done
-syslog-ng-dinit			done
-seatd-dinit			done
-turnstile-dinit			done
-avahi-dinit			done
-bluez-dinit			done
-chrony-dinit			done
-cronie-dinit			done
-# cups-dinit				add in if i ever need printing
-elogind-dinit			done
-haveged-dinit			done
-logrotate			done
-# power-profiles-daemon-dinit
-alsa-utils-dinit		done
-openssh-dinit			done
-tailscale-dinit			done
-sddm-dinit			done
-# smartmontools
+# Other bootables
++ memtest86+-efi
 
-# audio
-pipewire			done
-pipewire-dinit			done
-pipewire-pulse			done
-pipewire-pulse-dinit		done
-wireplumber			done
+# Bootloader
++ limine
++ efibootmgr
 
-# package management
-artix-archlinux-support		done
-yay				done
-# pacutils
+# dinit services/user session
++ dinit
++ seatd-dinit
++ turnstile-dinit
++ acpid-dinit
++ chrony-dinit
++ haveged-dinit
+? cronie-dinit
 
-man-db				done
-man-pages			done
+# Log files
++ metalog-dinit
++ logrotate
 
-# file stuff
-7zip				done
-unzip				done
-xarchiver				find better archive handler (one that'll let me 'Extract Here'
-zip				done
+# DBus
++ dbus-dinit
++ dbus-dinit-user		(required by pipewire-dinit, even though afaik turnstile handles dinit user services)
 
-mpv				done
-# tumbler				need to figure out thumbnailing needs first
-viewnior			done
+# Internet/Bluetooth/SSH/VPN
++ connman-dinit
++ wpa_supplicant
++ connman-gtk
++ bluez-dinit
++ openssh-dinit
++ keychain
++ avahi-dinit
++ tailscale-dinit
 
-# dotfiles
-chezmoi				done
+# Package management
++ yay
++ artix-archlinux-support
++ man-db
++ man-pages
 
-# desktop stuff
-brightness			done
-brightnessctl			done
-fastfetch			done
-foot				done
-vim				done
-helix				done
-lazygit				done
-htop				done
-yt-dlp				done
-inxi				done
-# rbonsai
-kanshi				done
-# swaybg
-swayidle			done
-swaylock			done
-labwc				done
-waybar				done
-mako				done
-wpaperd				done	blocks labwc root input; try swaybg again or find alternative
-wofi				done
-pcmanfm				done
-gedit				done
-pavucontrol			done
+# Backups
++ borg
 
-# wayland
-cliphist			done
-grim				done
-slurp				done
-wf-recorder			done
-wl-clip-persist			done
-wl-clipboard			done
-wlopm				done
-wlr-randr			done
-xdg-desktop-portal		done
-xdg-desktop-portal-wlr		done
+# File storage/device management
+- btrfs-progs
+? smartmontools
 
-dconf-editor			done
+# Graphics drivers
++ nvidia-580xx-dkms
 
-# dev stuff
-git				done
+# System fonts
++ noto-fonts
++ noto-fonts-cjk
++ noto-fonts-emoji
++ otf-font-awesome
 
-# creative stuff
-audacity
-blender
-gimp
+# Hardware configuration
++ openrgb
++ kanshi
++ brightnessctl
+- brightness
 
-# internet stuff
-equibop-bin			done
-firefox				done
-# halloy				also try out alternatives if i decide to get into IRC
+# Display manager
++ sddm-dinit
 
-# game stuff
-steam
-gamescope			done
-osu-lazer-bin			done
-prismlauncher			done
-# packwiz-git				add in if i need to do more minecraft modpack management (probably)
-# r2modman-bin				add in if i do more with modded EtG or whatever
-# archipelagowm-bin			add in if it seems like i'm going to do more archipelagos
-# lumafly				add in if it seems like i'm going to do modded hollow knight again
+# Desktop environment
++ labwc
++ swayidle
++ swaylock
++ waybar
++ mako
+? libnotify
++ wofi
+- wpaperd
+? swaybg
 
-# misc stuff
-openrgb				done
-iloader-bin
-localsend-bin
-# virt-manager				worry about if i need to do virtual machines ever
+# Wayland utilities
++ grim
++ slurp
++ wf-recorder
++ wlr-randr
++ wlopm
++ cliphist
++ wl-clipboard
++ wl-clip-persist
++ xorg-xwayland
 
-# backups
-borg				done
-# rsync
-# timeshift
+# Audio
++ pipewire-dinit
++ pipewire-pulse-dinit
++ wireplumber-dinit
++ pavucontrol
+? rtkit
+? pipewire-alsa
+? alsa-utils
+? alsa-firmware
 
-# idk but these have a particular vibe
-libreoffice-still
-texworks
-texlive-basic
-texlive-bibtexextra
-texlive-binextra
-texlive-context
-texlive-fontsextra
-texlive-fontsrecommended
-texlive-fontutils
-texlive-formatsextra
-texlive-games
-texlive-humanities
-texlive-latex
-texlive-latexextra
-texlive-latexrecommended
-texlive-luatex
-texlive-mathscience
-texlive-metapost
-texlive-music
-texlive-pictures
-texlive-plaingeneric
-texlive-pstricks
-texlive-publishers
-texlive-xetex
+# XDG
++ xdg-user-dirs
++ xdg-desktop-portal
++ xdg-desktop-portal-wlr
+
+# GTK
+- gtk4
+- gtk3
+- dconf-editor
+
+# File management/utilities
++ pcmanfm
++ engrampa
++ 7zip
++ zip
++ unzip
+
+# Dotfiles
++ chezmoi
+
+# Terminal
++ foot
++ zsh
++ zsh-completions
+? bash-completion
++ helix
++ lazygit
++ htop
++ yt-dlp
+- fastfetch
+- inxi
+- usbutils
+- vim
+
+# Development
++ git 			(may be the most important package here)
++ gdvm 			(setup required; see installation_notes.txt for details)
+- dotnet-sdk-8.0
+? rider
+? webstorm
+
+# Other software
++ gedit
++ texworks
++ texlive (group)
+- audacity
+- blender
+- gimp
+- libreoffice-still
+
+# Images/videos
++ viewnior
++ mpv
+
+# Internet/social
++ firefox
++ equibop-bin
+
+# Spotify
++ spotify-launcher
++ ffmpeg4.4
++ puddletag
+
+# osu!
++ osu-lazer-bin
+- wootility
+
+# Minecraft
+- prismlauncher
+- glfw
+? packwiz-git
+
+# Archipelago randomizers
+- archipelagowm-bin
+
+# Steam
+- steam
+- gamescope
+- scopebuddy		(setup required; see installation_notes.txt)
+
+# Modded games
+- r2modman-bin
+- lumafly
+
+# File transfer
+- localsend-bin
+
+# Undetermined (misc)
+? timeshift
+? rsync
+? rbonsai
+? tumbler
+? pacutils
+? halloy
+? virt-manager
+? iloader-bin
+? cups-dinit
+? power-profiles-daemon-dinit
