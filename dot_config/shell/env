@@ -1,23 +1,24 @@
 #!/bin/sh
-# Set up my environment variables
+# $XDG_CONFIG_HOME/shell/env
+# Use this file to set environment variables that should be available to other programs (e.g. EDITOR, XDG_CONFIG_HOME, PATH).
 
 # Set default programs
-export EDITOR="helix"
-export TERMINAL="foot"
-export BROWSER="firefox"
+export EDITOR=helix
+export TERMINAL=foot
+export BROWSER=firefox
 
 # Set XDG directories
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
 
-# Add directories to the path
-# Local binaries
-export PATH="$PATH:$HOME/.local/bin"
-# Godot Version Manager
-export PATH="$PATH:$HOME/.gdvm/bin"
-export PATH="$PATH:$HOME/.gdvm/bin/current_godot"
+# Add '~/.local/bin' subdirectories to path
+for d in ~/.local/bin/*; do
+    PATH+=":$d"
+done
 
-# Source aliases
-source $XDG_CONFIG_HOME/shell/alias
+# GDVM
+export PATH=$PATH:$HOME/.gdvm/bin
+export PATH=$PATH:$HOME/.gdvm/bin/current_godot
+

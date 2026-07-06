@@ -1,5 +1,6 @@
 #!/bin/sh
-# Set up my shell aliases
+# $XDG_CONFIG_HOME/shell/alias
+# Use this file to set interactive shell-specific configurations. Aliases are the primary thing that goes here. Anything specific to a certain shell (bash, zsh) stays in the respective file that sources this one.
 
 # Colorize aliases
 alias ls='ls --color=auto'
@@ -14,3 +15,4 @@ alias gg='lazygit'
 # Screenshot aliases
 alias scopy='grim -g "$(slurp)" - | wl-copy'
 alias sshot='grim -g "$(slurp)"'
+

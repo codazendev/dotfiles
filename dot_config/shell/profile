@@ -1,0 +1,8 @@
+#!/bin/sh
+# $XDG_CONFIG_HOME/shell/profile
+# Use this file to set login shell-specific variables. These are the kinds of things that need to exist once for a given session (e.g. registering ssh keys with keychain).
+
+# Register ssh keys with keychain
+eval $(keychain --eval --quiet ~/.ssh/id_github_codazendev)
+eval $(keychain --eval --quiet ~/.ssh/id_github_jgkingdev)
+

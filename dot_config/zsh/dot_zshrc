@@ -1,0 +1,29 @@
+#!/bin/zsh
+# $XDG_CONFIG_HOME/zsh/.zshrc
+# Run for interactive shells.
+# Typically used to set interactive-shell specific configurations or add aliases.
+
+# Use XDG dirs for history file
+# History settings
+HISTSIZE=1000
+SAVEHIST=$HISTSIZE
+[ -d $XDG_STATE_HOME/zsh ] || mkdir -p $XDG_STATE_HOME/zsh
+HISTFILE=$XDG_STATE_HOME/zsh/history
+
+# Use XDG dirs for completion file
+autoload -Uz compinit
+[ -d $XDG_CACHE_HOME/zsh ] || mkdir -p $XDG_CACHE_HOME/zsh
+zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
+
+# Prompt settings
+autoload -Uz promptinit
+promptinit
+prompt redhat
+
+# Set options
+setopt nobeep
+
+# Source aliases
+source $XDG_CONFIG_HOME/shell/alias
+

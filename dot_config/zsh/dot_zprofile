@@ -1,0 +1,7 @@
+#!/bin/zsh
+# $XDG_CONFIG_HOME/zsh/.zprofile
+# Run for login shells.
+# Used for executing user's commands at start. Typically used to autostart graphical sessions and to set session-wide environment variables.
+
+source $XDG_CONFIG_HOME/shell/profile
+

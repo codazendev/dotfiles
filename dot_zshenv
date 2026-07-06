@@ -1,0 +1,8 @@
+#!/bin/zsh
+# ~/.zshenv
+# Basically run for every zsh, both login and interactive.
+# Used for setting environment variables that should be available to other programs. Typically used to set variables like ZDOTDIR (so zsh knows what it's doing), xdg directories (so programs know where to interface with files), and EDITOR (just to be sure every zsh uses helix for file editing).
+
+source $HOME/.config/shell/env
+export ZDOTDIR=$XDG_CONFIG_HOME/zsh
+
