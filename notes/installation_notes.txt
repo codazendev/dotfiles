@@ -55,6 +55,7 @@ If the machine will be used for gaming, set up scopebuddy`
 If the machine will be used for osu!, blacklist the wacom and hid_uclogic kernel modules
 https://unix.stackexchange.com/a/797099
 https://wiki.archlinux.org/title/Kernel_module#blacklist
+created file /etc/udev/rules.d/72-hidraw-access.rules containing `KERNEL=="hidraw*", SUBSYSTEM=="hidraw*", MODE="0660", TAG+="uaccess"`
 
 # Firefox
 Customize the Firefox toolbar and change the device name to 'jking@$HOSTNAME'
@@ -75,3 +76,4 @@ change this file to markdown instead of txt
 check various packages' optional dependencies to see what I might be missing
 colorize the zsh prompt
 make zsh use alt+backspace to delete words instead of going by whitespace
+fix zsh not respecting ctrl+left/right or alt+left/right

@@ -74,6 +74,7 @@ KEY:
 + kanshi
 + brightnessctl
 - brightness
+- wev
 
 # Display manager
 + sddm-dinit
