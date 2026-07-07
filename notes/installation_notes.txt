@@ -86,3 +86,4 @@ customizing waybar
 setting up a cron job for automatically running `yay`
 collecting more wallpapers
 seeing what else chezmoi can do (automatic install/setup script)
+make openrgb profile load on system start
