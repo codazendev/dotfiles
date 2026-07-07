@@ -93,6 +93,7 @@ KEY:
 # Wayland utilities
 + grim
 + slurp
+? swappy
 + wf-recorder
 + wlr-randr
 + wlopm

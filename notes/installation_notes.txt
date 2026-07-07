@@ -66,6 +66,9 @@ Then put `twitch.tv##+js(twitch-videoad)` in "My Filters" and
 `https://raw.githubusercontent.com/pixeltris/TwitchAdSolutions/f8f86706daf90daa534b26bce5b2f01238667d5f/vaft/vaft-ublock-origin.js`
 in `userResourcesLocation` field in the "Advanced User Settings" screen
 
+# Setting up screenshot keybinds instead of doing it from the terminal all the time
+https://www.reddit.com/r/labwc/comments/1abrwor/i_need_help_with_a_screenshot_keybind/
+
 
 # Up next:
 configure sddm
@@ -77,3 +80,9 @@ check various packages' optional dependencies to see what I might be missing
 colorize the zsh prompt
 make zsh use alt+backspace to delete words instead of going by whitespace
 fix zsh not respecting ctrl+left/right or alt+left/right
+make keybinds for launching lazygit, helix, etc
+set up/configure nicer gtk themes (ideally to match Triste-Violet)
+customizing waybar
+setting up a cron job for automatically running `yay`
+collecting more wallpapers
+seeing what else chezmoi can do (automatic install/setup script)
