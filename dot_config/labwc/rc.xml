@@ -63,9 +63,16 @@
         <!-- Screenshot keybinds -->
         <keybind key="W-s">
             <action name="Execute">
+                <command>sh -c 'grim -g "$(slurp)" - | swappy -f -'</command>
+            </action>
+        </keybind>
+
+        <keybind key="W-A-s">
+            <action name="Execute">
                 <command>sh -c 'grim -g "$(slurp)" - | wl-copy'</command>
             </action>
         </keybind>
+
     </keyboard>
 
     <mouse>
