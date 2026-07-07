@@ -29,7 +29,7 @@
             <action name="Execute" command="wofi --conf=~/.config/wofi/config" />
         </keybind>
 
-        <!-- Make super+space bring up the window menu -->
+        <!-- Make code+space bring up the window menu -->
         <keybind key="W-Space">
             <action name="ShowMenu" menu="clientMenu" atCursor="no" />
         </keybind>
@@ -51,13 +51,20 @@
             <action name="SendToDesktop" to="right" />
         </keybind>
 
-        <!-- Dedicated program keybinds -->
+        <!-- Program keybinds -->
         <keybind key="W-Return">
             <action name="Execute" command="foot" />
         </keybind>
 
         <keybind key="W-c">
             <action name="Execute" command="pcmanfm" />
+        </keybind>
+
+        <!-- Screenshot keybinds -->
+        <keybind key="W-s">
+            <action name="Execute">
+                <command>sh -c 'grim -g "$(slurp)" - | wl-copy'</command>
+            </action>
         </keybind>
     </keyboard>
 
