@@ -4,12 +4,12 @@ Installation Notes
 https://wiki.archlinux.org/title/Limine
 
 # Auto-mounting drives
-If the machine has any auto-mounted drives, make sure the fstab file is set up correctly
+If the machine has any auto-mounted drives, make sure `/etc/fstab` is set up correctly
 Give user access to auto-mounted drives
 `chmod user /mnt/$FOLDER_NAME`
 
 # Package manager setup
-Modify pacman.conf to enable the arch linux repositories
+Modify `pacman.conf` to enable the arch linux repositories
 ```
 [system]
 Include = /etc/pacman.d/mirrorlist
@@ -55,7 +55,10 @@ If the machine will be used for gaming, set up scopebuddy`
 If the machine will be used for osu!, blacklist the wacom and hid_uclogic kernel modules
 https://unix.stackexchange.com/a/797099
 https://wiki.archlinux.org/title/Kernel_module#blacklist
-created file /etc/udev/rules.d/72-hidraw-access.rules containing `KERNEL=="hidraw*", SUBSYSTEM=="hidraw*", MODE="0660", TAG+="uaccess"`
+created file `/etc/udev/rules.d/72-hidraw-access.rules` containing:
+```
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw*", MODE="0660", TAG+="uaccess"
+```
 
 # Firefox
 Customize the Firefox toolbar and change the device name to 'jking@$HOSTNAME'
@@ -76,8 +79,8 @@ configure metalog
 explore alternatives to wpaperd
 add texworks configuration to chezmoi
 change this file to markdown instead of txt
-check various packages' optional dependencies to see what I might be missing
 colorize the zsh prompt
+look into oh-my-zsh
 make zsh use alt+backspace to delete words instead of going by whitespace
 fix zsh not respecting ctrl+left/right or alt+left/right
 make keybinds for launching lazygit, helix, etc
@@ -87,3 +90,29 @@ setting up a cron job for automatically running `yay`
 collecting more wallpapers
 seeing what else chezmoi can do (automatic install/setup script)
 make openrgb profile load on system start
+set up zellij
+labwc file chooser thing: https://labwc.github.io/integration.html#gtk
+labwc-tweaks?
+yofi/fuzzel/bemenu?
+
+
+check various packages' optional dependencies to see what I might be missing
+maybe:
+aspell: for aspell based spell checking support
+bind: dig: -i wlan IP
+chafa: Image output as ascii art
+clang: for qdoc and lupdate
+gsfonts: correctly display PDF files without embedded fonts
+gvfs: Trash support, mounting with udisks and remote filesystems
+harfbuzz-utils: utilities
+lesspipe: src-hilite-lesspipe.sh
+lib32-harfbuzz: Improved autohinting
+lib32-pipewire-jack: JACK support
+libinput-tools: debug utilities
+libwebp-utils: WebP conversion and inspection tools
+opengl-man-pages: for the OpenGL API man pages
+qt5-declarative: for using Qt5 themes
+usbmuxd: Read charge status of iOS devices
+webstorm-jre: JetBrains custom Java Runtime (Recommended)
+wireplumber-docs: Documentation
+xorg-fonts-misc: x11 driver

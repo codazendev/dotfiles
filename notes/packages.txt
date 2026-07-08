@@ -134,11 +134,13 @@ KEY:
 
 # Terminal
 + foot
+? foot-terminfo
 + zsh
 + zsh-completions
 ? bash-completion
 + helix
 + lazygit
+? zellij
 + htop
 + yt-dlp
 - fastfetch
@@ -155,6 +157,7 @@ KEY:
 
 # Other software
 + gedit
+? gedit-plugins
 + texworks
 + texlive (group)
 - audacity
