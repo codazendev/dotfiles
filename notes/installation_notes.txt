@@ -72,6 +72,7 @@ in `userResourcesLocation` field in the "Advanced User Settings" screen
 # Setting up screenshot keybinds instead of doing it from the terminal all the time
 https://www.reddit.com/r/labwc/comments/1abrwor/i_need_help_with_a_screenshot_keybind/
 
+# Add user to input group for waybar
 
 # Up next:
 configure sddm
@@ -94,6 +95,7 @@ set up zellij
 labwc file chooser thing: https://labwc.github.io/integration.html#gtk
 labwc-tweaks?
 yofi/fuzzel/bemenu?
+sync gedit configuration
 
 
 check various packages' optional dependencies to see what I might be missing

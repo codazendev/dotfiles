@@ -73,6 +73,7 @@ KEY:
 + openrgb
 + kanshi
 + brightnessctl
++ tlp
 - brightness
 - wev
 
@@ -142,6 +143,7 @@ KEY:
 + lazygit
 ? zellij
 + htop
++ powertop
 + yt-dlp
 - fastfetch
 - inxi
